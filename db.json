@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "title": "Adding task",
+      "dueDate": "2026-08-06",
+      "category": "Work",
+      "priority": {
+        "high": true,
+        "medium": false,
+        "low": false
+      },
+      "status": "Not Started",
+      "completed": false,
+      "id": "GX0waU1AXfg"
+    },
+    {
+      "title": "Deleting task",
+      "dueDate": "2026-07-29",
+      "category": "Personal",
+      "priority": {
+        "high": false,
+        "medium": true,
+        "low": false
+      },
+      "status": "Not Started",
+      "completed": false,
+      "id": "KfMNeVqfk50"
+    },
+    {
+      "title": "2d",
+      "dueDate": "2026-08-24",
+      "category": "Work",
+      "priority": {
+        "high": false,
+        "medium": true,
+        "low": false
+      },
+      "status": "Not Started",
+      "completed": false,
+      "id": "1kwehSS0DcQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
