@@ -22,6 +22,7 @@ const App = () => {
   const [tasksFilter, setTasksFilter] = useState('all')
   const [errorMessage, setErrorMessage] = useState('')
 
+  const baseUrl = '/api/tasks'
   //reset form
   const clearModal = () => {
     setNewTask('')
@@ -45,9 +46,11 @@ const App = () => {
   //Get task data from server
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/tasks")
+      .get(baseUrl)
       .then(response => {
         console.log("promise fullfilled")
+        console.log(response.data)
+        console.log(Array.isArray(response.data)) 
         setTasks(response.data)
         clearModal()
     })
@@ -102,7 +105,7 @@ const App = () => {
     // update task if edited
     if (editingTask === null){
       axios
-        .post("http://localhost:3001/api/tasks", taskObject)
+        .post(baseUrl, taskObject)
         .then(response => {
           console.log("promise fullfilled")
           setTasks(tasks.concat(response.data))
@@ -115,7 +118,7 @@ const App = () => {
     } else {
 
       axios
-        .put(`http://localhost:3001/api/tasks/${editingTask}`, taskObject)
+        .put(`${baseUrl}/${editingTask}`, taskObject)
         .then(response => {
           setTasks(tasks.map(task => task.id === editingTask? response.data:task))
           closeModal()
@@ -138,7 +141,7 @@ const App = () => {
     const changedTask = {...task, completed: !task.completed }
     
     axios
-      .put(`http://localhost:3001/api/tasks/${id}`, changedTask)
+      .put(`${baseUrl}/${id}`, changedTask)
       .then(response => {
         console.log(changedTask)
         setTasks(tasks.map(task => task.id === id? response.data:task))
@@ -154,7 +157,7 @@ const App = () => {
     const removeTask = tasks.filter(task => task.id !== id)
 
     axios
-      .delete(`http://localhost:3001/api/tasks/${id}`)
+      .delete(`${baseUrl}/${id}`)
       .then(response =>{
         console.log('task deleted', response)
         setTasks(removeTask)
