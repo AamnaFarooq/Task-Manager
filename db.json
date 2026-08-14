@@ -1,9 +1,22 @@
 {
   "tasks": [
     {
-      "title": "Adding task",
-      "dueDate": "2026-08-06",
-      "category": "Work",
+      "title": "Do Arrays & Hashmap Easy LC problems",
+      "dueDate": "2026-08-03",
+      "category": "School",
+      "priority": {
+        "high": true,
+        "medium": false,
+        "low": false
+      },
+      "status": "Not Started",
+      "completed": true,
+      "id": "DxYWL64hhZs"
+    },
+    {
+      "title": "Start Part 3 of Fullstack Open",
+      "dueDate": "2026-08-03",
+      "category": "School",
       "priority": {
         "high": true,
         "medium": false,
@@ -11,11 +24,11 @@
       },
       "status": "Not Started",
       "completed": false,
-      "id": "GX0waU1AXfg"
+      "id": "U8mxjaYgJHM"
     },
     {
-      "title": "Deleting task",
-      "dueDate": "2026-07-29",
+      "title": "Begin working on Backend for TaskManager",
+      "dueDate": "2026-08-03",
       "category": "Personal",
       "priority": {
         "high": false,
@@ -24,11 +37,11 @@
       },
       "status": "Not Started",
       "completed": false,
-      "id": "KfMNeVqfk50"
+      "id": "IwxzoUjk1MU"
     },
     {
-      "title": "2d",
-      "dueDate": "2026-08-24",
+      "title": "Finish one of the Coodle tasks",
+      "dueDate": "2026-08-03",
       "category": "Work",
       "priority": {
         "high": false,
@@ -37,7 +50,59 @@
       },
       "status": "Not Started",
       "completed": false,
-      "id": "1kwehSS0DcQ"
+      "id": "ugztSbt8NDs"
+    },
+    {
+      "title": "DFG Meeting",
+      "dueDate": "2026-08-03",
+      "category": "Work",
+      "priority": {
+        "high": false,
+        "medium": false,
+        "low": true
+      },
+      "status": "Not Started",
+      "completed": true,
+      "id": "sxsN-oteisE"
+    },
+    {
+      "title": "Wash hair",
+      "dueDate": "2026-08-03",
+      "category": "Personal",
+      "priority": {
+        "high": false,
+        "medium": false,
+        "low": true
+      },
+      "status": "Not Started",
+      "completed": true,
+      "id": "oTI4OJ83iU8"
+    },
+    {
+      "title": "walk 5000+ steps",
+      "dueDate": "2026-08-03",
+      "category": "Personal",
+      "priority": {
+        "high": false,
+        "medium": true,
+        "low": false
+      },
+      "status": "Not Started",
+      "completed": true,
+      "id": "ZfYxmab-LfE"
+    },
+    {
+      "title": "read 10 minutes",
+      "dueDate": "2026-08-03",
+      "category": "Personal",
+      "priority": {
+        "high": false,
+        "medium": false,
+        "low": true
+      },
+      "status": "Not Started",
+      "completed": false,
+      "id": "RNlONs83Q3U"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

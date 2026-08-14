@@ -45,7 +45,7 @@ const App = () => {
   //Get task data from server
   useEffect(() => {
     axios
-      .get("http://localhost:3001/tasks")
+      .get("http://localhost:3001/api/tasks")
       .then(response => {
         console.log("promise fullfilled")
         setTasks(response.data)
@@ -102,7 +102,7 @@ const App = () => {
     // update task if edited
     if (editingTask === null){
       axios
-        .post("http://localhost:3001/tasks", taskObject)
+        .post("http://localhost:3001/api/tasks", taskObject)
         .then(response => {
           console.log("promise fullfilled")
           setTasks(tasks.concat(response.data))
@@ -115,7 +115,7 @@ const App = () => {
     } else {
 
       axios
-        .put(`http://localhost:3001/tasks/${editingTask}`, taskObject)
+        .put(`http://localhost:3001/api/tasks/${editingTask}`, taskObject)
         .then(response => {
           setTasks(tasks.map(task => task.id === editingTask? response.data:task))
           closeModal()
@@ -138,7 +138,7 @@ const App = () => {
     const changedTask = {...task, completed: !task.completed }
     
     axios
-      .put(`http://localhost:3001/tasks/${id}`, changedTask)
+      .put(`http://localhost:3001/api/tasks/${id}`, changedTask)
       .then(response => {
         console.log(changedTask)
         setTasks(tasks.map(task => task.id === id? response.data:task))
@@ -154,7 +154,7 @@ const App = () => {
     const removeTask = tasks.filter(task => task.id !== id)
 
     axios
-      .delete(`http://localhost:3001/tasks/${id}`)
+      .delete(`http://localhost:3001/api/tasks/${id}`)
       .then(response =>{
         console.log('task deleted', response)
         setTasks(removeTask)
