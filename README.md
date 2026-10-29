@@ -34,9 +34,6 @@ A full-stack task management application for organizing and tracking tasks by st
 ### Deployment
 - Render
 
-## Screenshots
-[one good screenshot]
-
 ## Running Locally
 
 ### Prerequisites
