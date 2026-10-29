@@ -43,7 +43,7 @@ Make sure you have Node.js and npm installed. You will also need access to a Mon
 
 ```bash
 git clone <repository-url> 
-cd Task_Manager_Project
+cd Task-Manager
 ```
 
 ### 2. Install frontend dependencies
